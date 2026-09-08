@@ -20,7 +20,7 @@ weather_data = response.json()
 
 will_rain = False
 for check in weather_data['list']:
-    if check['weather'][0]['id'] < 700:
+    if check['weather'][0]['id'] < 600:
         will_rain = True
 if will_rain:
     with smtplib.SMTP("smtp.gmail.com") as connection:
